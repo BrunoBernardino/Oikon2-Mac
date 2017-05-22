@@ -199,6 +199,12 @@ class App extends React.Component {
         .then(() => {
           this.loadData();
 
+          // Reset visibleTypes
+          SettingsDB.set('filters.visibleTypes', []);
+          this.setState({
+            filtersVisibleTypes: [],
+          });
+
           notie.alert({
             type: 'success',
             text: 'Wohoo! Expense Type deleted.',
@@ -241,6 +247,12 @@ class App extends React.Component {
       DataDB.deleteDB()
         .then(() => {
           DataDB.init(settings.remoteURL);
+
+          // Reset visibleTypes
+          SettingsDB.set('filters.visibleTypes', []);
+          this.setState({
+            filtersVisibleTypes: [],
+          });
 
           this.loadData();
 
