@@ -1,0 +1,320 @@
+html {
+  background: transparent url('./assets/bg.png') center center no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+body {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  color: #fff;
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, sans-serif;
+  font-weight: 300;
+  margin: 20px 10px;
+  min-width: 900px;
+  min-height: 400px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: 400;
+}
+
+input, select, button {
+  font-family: "Helvetica Neue", HelveticaNeue, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+/*
+  Hides the clear button and top/down arrows (because I can't change their colors to be more visible)
+*/
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+#main-loading {
+  flex: 1;
+  align-items: center;
+  font-size: 3em;
+  text-align: center;
+  margin-top: 25%;
+}
+
+#main-app {
+  display: none;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+#main-app-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+
+#expenses-tab {
+  flex: 0.5;
+  margin: 0 10px 0 0;
+  padding: 0 20px 0 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dates-filter {
+  display: flex;
+}
+
+.dates-filter .date {
+  flex: 1;
+  cursor: pointer;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dates-filter .date:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dates-filter .date:first-child {
+  margin-right: 10px;
+}
+
+.dates-filter .date label,
+.dates-filter .date span {
+  flex: 1;
+}
+
+.dates-filter .date label {
+  font-size: 0.9em;
+}
+
+.expenses-list,
+.types-list {
+  flex: 1;
+  margin-top: 10px;
+  max-height: 90%;
+  overflow-y: scroll;
+}
+
+.expenses-list .list-item,
+.types-list .list-item {
+  cursor: pointer;
+  padding: 5px 10px;
+  display: flex;
+}
+
+.expenses-list .list-item:nth-child(2n+1),
+.types-list .list-item:nth-child(2n+1) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.expenses-list .list-item:hover,
+.types-list .list-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.expenses-list .list-item span,
+.types-list .list-item span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.expenses-list .list-item span:first-child {
+  flex: 0.4;
+}
+.expenses-list .list-item span:nth-child(2),
+.types-list .list-item span:nth-child(2) {
+  flex: 0.2;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: .8em;
+  line-height: 1.5em;
+}
+.expenses-list .list-item span:nth-child(3) {
+  flex: 0.2;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: .8em;
+  line-height: 1.5em;
+}
+.expenses-list .list-item span:last-child,
+.types-list .list-item span:last-child {
+  flex: 0.2;
+  text-align: right;
+  font-weight: 400;
+}
+
+#stats-tab {
+  flex: 0.25;
+  margin: 0 10px 0 0;
+  padding: 0 20px 0 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+input[name="search"] {
+  font-size: 1.1em;
+  border: none;
+  border-left: 2px #fff solid;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  color: #fff;
+  display: block;
+  width: 90%;
+}
+input[name="search"]::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+h5 {
+  font-size: 1.3em;
+  text-align: center;
+  margin: 20px 0 5px;
+  font-weight: 300;
+}
+
+h2 {
+  text-align: center;
+  margin: 10px 0 20px;
+}
+
+.types-list {
+  margin-bottom: 20px;
+  max-height: 70%;
+}
+
+.types-list .list-item span:first-child {
+  flex: 0.6;
+}
+.types-list .list-item span:nth-child(2) {
+  flex: 0.3;
+}
+.types-list .list-item span:last-child {
+  flex: 0.1;
+}
+
+#add-tab {
+  flex: 0.25;
+  margin: 0;
+  padding: 0 10px 0 10px;
+}
+
+h1 {
+  margin: 20px auto 40px;
+  text-align: center;
+}
+
+h1 img {
+  width: 139px;
+  height: 43px;
+}
+
+.input-field {
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.1);
+  display: block;
+  display: flex;
+}
+.input-field:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.input-field label {
+  border-left: 2px #fff solid;
+  color: #fff;
+  padding: 7px 0 7px 12px;
+  flex: 0.3;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.input-field input,
+select {
+  margin-left: 5px;
+  font-size: 1em;
+  border: none;
+  background: transparent;
+  padding: 7px 12px 7px 0;
+  color: #fff;
+  flex: 0.7;
+  text-align: right;
+  text-align-last: right;
+}
+.input-field input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input-field input[type="date"] {
+  font-size: .8em;
+}
+
+button {
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 0.9em;
+  padding: 6px 12px;
+  text-align: center;
+  display: block;
+  margin: 15px 0 0 auto;
+  border-radius: 3px;
+  cursor: pointer;
+}
+button:hover,
+button:active {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#add-expense-type {
+  margin-top: 60px;
+}
+
+#settings-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin: 0;
+  padding: 5px 5px 2px;
+  display: block;
+}
+
+#settings-button img {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+}
+
+button {
+  -webkit-app-region: no-drag;
+}
+
+/*
+  sweetAlert fixes
+*/
+.sweet-alert.show-input input[type="date"] {
+  padding-right: 30px;
+}
+
+/*
+  notie fixes
+*/
+.notie-container {
+  padding: 7px;
+  font-size: .9em;
+  width: 50%;
+  left: 25%;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,.3);
+  cursor: pointer;
+}
+
+.notie-background-success {
+  background-color: #40A277;
+}

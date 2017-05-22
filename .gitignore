@@ -1,0 +1,12 @@
+.DS_Store
+node_modules
+*.log
+
+# PouchDB directories
+expenses/*
+types/*
+expenses-mrview*/*
+types-mrview*/*
+
+# Release
+build/*
