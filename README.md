@@ -17,7 +17,7 @@ $ npm test
 ```
 
 ### To-dos
-- [ ] Fix DB error after packaging app.
+- [ ] [Fix DB error after packaging app](https://github.com/nolanlawson/pouchdb-electron/issues/9).
 
 ### Release
 
