@@ -19,7 +19,7 @@ packager({
     /build\.js/,
     /entitlements\.plist/,
     /\.travis\.yml/,
-    /\/tests\//,
+    /\/test\//,
     /\/expenses\//,
     /\/types\//,
     /\/expenses-mrview(.*)/,
