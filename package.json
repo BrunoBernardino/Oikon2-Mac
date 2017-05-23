@@ -9,7 +9,8 @@
     "postinstall": "./node_modules/.bin/electron-rebuild",
     "build": "rm -fr build && node ./build.js",
     "lint": "node_modules/.bin/eslint *.js components/** utils/**",
-    "test": "./node_modules/mocha/bin/mocha tests/index.js --timeout=5000"
+    "test": "./node_modules/mocha/bin/mocha tests/index.js --timeout=5000",
+    "ci-test": "./node_modules/mocha/bin/mocha tests/index.js --timeout=15000"
   },
   "repository": "https://github.com/BrunoBernardino/Oikon2-Mac",
   "keywords": [

@@ -18,7 +18,6 @@ packager({
   ignore: [
     /build\.js/,
     /entitlements\.plist/,
-    /travis-setup\.sh/,
     /\.travis\.yml/,
     /\/tests\//,
     /\/expenses\//,
