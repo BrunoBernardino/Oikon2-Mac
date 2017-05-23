@@ -10,9 +10,5 @@ before_script:
 
 script: npm run ci-test
 
-cache:
-  directories:
-    - node_modules
-
 notifications:
   email: false

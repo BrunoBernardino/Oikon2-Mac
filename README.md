@@ -4,7 +4,7 @@ https://oikon.net
 
 [![Showcase](https://cloud.githubusercontent.com/assets/1239616/26329899/3c987998-3f41-11e7-885f-5e8726366712.png)](https://github.com/BrunoBernardino/Oikon2-Mac/issues/1)
 
-### Development
+## Development
 
 Requires `node` (ideally through `nvm`) >= 7.0.0, and `npm`.
 
@@ -17,10 +17,10 @@ $ npm run lint
 $ npm test
 ```
 
-### To-dos
+## To-dos
 - [ ] [Fix DB error after packaging app](https://github.com/nolanlawson/pouchdb-electron/issues/9).
 
-### Release
+## Release
 
 ```bash
 $ npm run build
