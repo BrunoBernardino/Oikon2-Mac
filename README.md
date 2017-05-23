@@ -13,6 +13,7 @@ Docs: http://electron.atom.io/docs
 ```bash
 $ npm install
 $ npm start
+$ npm run lint
 $ npm test
 ```
 

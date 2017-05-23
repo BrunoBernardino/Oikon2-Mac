@@ -481,8 +481,6 @@ class App extends React.Component {
 
     const type = {
       name: state.newTypeName,
-      cost: 0,
-      count: 0,
     };
 
     DataDB.add('type', type)
@@ -562,8 +560,6 @@ class App extends React.Component {
       try {
         const type = {
           name: expense.type,
-          count: 0,
-          cost: 0,
         };
 
         await DataDB.add('type', type);

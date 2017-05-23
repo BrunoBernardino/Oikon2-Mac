@@ -13,8 +13,6 @@ class App extends React.Component {
       _id: '',
       _rev: '',
       name: '',
-      cost: 0,
-      count: 0,
     };
   }
 
@@ -25,8 +23,6 @@ class App extends React.Component {
       _id: type._id,
       _rev: type._rev,
       name: type.name,
-      cost: type.cost,
-      count: type.count,
     });
   }
 
@@ -47,8 +43,6 @@ class App extends React.Component {
       _id: state._id,
       _rev: state._rev,
       name: state.name,
-      cost: state.cost,
-      count: state.count,
     };
 
     ipcRenderer.send('delete-type', type);
@@ -61,8 +55,6 @@ class App extends React.Component {
       _id: state._id,
       _rev: state._rev,
       name: state.name,
-      cost: state.cost,
-      count: state.count,
     };
 
     ipcRenderer.send('update-type', type);
