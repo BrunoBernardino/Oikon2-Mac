@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/BrunoBernardino/Oikon2-Mac.svg?branch=master)](https://travis-ci.org/BrunoBernardino/Oikon2-Mac)
+
 # Oikon 2 for Mac
 
 https://oikon.net
