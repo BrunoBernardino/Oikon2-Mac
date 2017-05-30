@@ -8,6 +8,7 @@
     "prebuild": "npm install && npm run lint && npm test",
     "postinstall": "./node_modules/.bin/electron-rebuild",
     "build": "rm -fr build && node ./build.js",
+    "release": "npm run build -- --sign",
     "lint": "node_modules/.bin/eslint *.js components/** utils/**",
     "test": "./node_modules/mocha/bin/mocha --timeout=5000",
     "ci-test": "./node_modules/mocha/bin/mocha --timeout=25000"

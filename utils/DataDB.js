@@ -13,10 +13,13 @@ const genericErrorHandler = (error) => {
 // Add .find plugin
 PouchDB.plugin(PouchDBFind);
 
+// Without this, the packaged version dies.
+const localDBPath = `${__dirname}/..`;
+
 const DataDB = {
   init(remoteHost) {
-    this.expensesDB = new PouchDB(EXPENSES_URI);
-    this.typesDB = new PouchDB(TYPES_URI);
+    this.expensesDB = new PouchDB(`${localDBPath}/${EXPENSES_URI}`);
+    this.typesDB = new PouchDB(`${localDBPath}/${TYPES_URI}`);
 
     // Add indexes
     this.expensesDB.createIndex({
@@ -42,8 +45,8 @@ const DataDB = {
         retry: true,
       };
 
-      PouchDB.sync(EXPENSES_URI, `${remoteHost}/${EXPENSES_URI}`, syncOptions);
-      PouchDB.sync(TYPES_URI, `${remoteHost}/${TYPES_URI}`, syncOptions);
+      PouchDB.sync(`${localDBPath}/${EXPENSES_URI}`, `${remoteHost}/${EXPENSES_URI}`, syncOptions);
+      PouchDB.sync(`${localDBPath}/${TYPES_URI}`, `${remoteHost}/${TYPES_URI}`, syncOptions);
     }
   },
 
