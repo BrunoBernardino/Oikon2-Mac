@@ -4,7 +4,7 @@ const rebuild = require('electron-rebuild').default;
 
 const osxSign = (process.argv.length >= 3 && process.argv[2] === '--sign') ? {
   entitlements: './entitlements.plist',
-} : false;
+} : undefined;
 
 packager({
   dir: './',

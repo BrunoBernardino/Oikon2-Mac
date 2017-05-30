@@ -20,7 +20,7 @@ $ npm test
 ```
 
 ## To-dos
-- [ ] [Fix DB error after packaging app](https://github.com/nolanlawson/pouchdb-electron/issues/9).
+- [ ] [Fix codesigning and icons](https://mintkit.net/electron-userland/electron-osx-sign/guide/)
 
 ## Release
 
