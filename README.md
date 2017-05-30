@@ -25,5 +25,8 @@ $ npm test
 ## Release
 
 ```bash
+# To test the packaged app
 $ npm run build
+# To build a signed version to upload (crashes if not downloaded from the App Store)
+$ npm run release
 ```
