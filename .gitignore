@@ -2,6 +2,9 @@
 node_modules
 *.log
 
+# Mac App Store
+*.provisionprofile
+
 # PouchDB directories
 expenses/*
 types/*

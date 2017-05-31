@@ -28,5 +28,13 @@ $ npm test
 # To test the packaged app
 $ npm run build
 # To build a signed version to upload (crashes if not downloaded from the App Store)
-$ npm run release
+$ export OSX_SIGN_IDENTITY='XXX' && npm run release
+```
+
+Make sure there's a valid `*.provisionprofile` file in the project directory.
+
+
+To get a list of available identities:
+```bash
+$ security find-identity -p codesigning -v
 ```

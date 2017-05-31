@@ -8,5 +8,7 @@
     <true/>
     <key>com.apple.security.network.client</key>
     <true/>
+    <key>com.apple.security.application-groups</key>
+    <string>BR4RWWLMM9.com.emotionloop.Oikon2Mac</string>
   </dict>
 </plist>
