@@ -5,13 +5,13 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "prebuild": "npm install && npm run lint && npm test",
+    "pretest": "npm install && npm run lint",
     "postinstall": "./node_modules/.bin/electron-rebuild",
     "build": "rm -fr build && node ./build.js",
     "release": "npm run build -- --sign && node_modules/.bin/electron-osx-flat \"build/Oikon 2-mas-x64/Oikon 2.app\" --verbose",
     "lint": "node_modules/.bin/eslint *.js components/** utils/**",
     "test": "./node_modules/mocha/bin/mocha --timeout=5000",
-    "ci-test": "./node_modules/mocha/bin/mocha --timeout=25000"
+    "ci-test": "npm run lint && ./node_modules/mocha/bin/mocha --timeout=25000"
   },
   "repository": "https://github.com/BrunoBernardino/Oikon2-Mac",
   "keywords": [
