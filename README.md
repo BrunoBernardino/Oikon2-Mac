@@ -13,16 +13,13 @@ Requires `node` (ideally through `nvm`) >= 7.0.0, and `npm`.
 Docs: http://electron.atom.io/docs
 
 ```bash
-$ npm install
-$ npm start
-$ npm run lint
 $ npm test
+$ npm start
 ```
 
-## To-dos
-- [ ] [Fix codesigning and icons](https://mintkit.net/electron-userland/electron-osx-sign/guide/)
-
 ## Release
+
+Don't forget to increment the `buildVersion` in `build.js` and update the `version` in `package.json`.
 
 ```bash
 # To test the packaged app

@@ -20,6 +20,7 @@ packager({
   arch: 'x64',
   icon: './assets/logo.icns',
   extendInfo: './info.plist',
+  buildVersion: 1,
   ignore: [
     /build\.js/,
     /entitlements\.plist/,
