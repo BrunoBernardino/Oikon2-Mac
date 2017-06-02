@@ -2,11 +2,12 @@ const _ = require('lodash');
 const fs = require('fs');
 const moment = require('moment');
 const notie = require('notie');
-const { ipcRenderer } = require('electron');
+const { ipcRenderer, remote } = require('electron');
 const React = require('react');
 const ReactDOM = require('react-dom');
 
-const DataDB = require('./utils/DataDB');
+const { app } = remote;
+const DataDB = require('./utils/DataDB')(app.getAppPath());
 const SettingsDB = require('./utils/SettingsDB')(window.localStorage);
 
 const ExpensesTab = require('./components/ExpensesTab');
