@@ -7,7 +7,8 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 
 const { app } = remote;
-const DataDB = require('./utils/DataDB')(app.getPath('appData'));
+const appData = `${app.getPath('appData')}/Oikon2-Mac`;
+const DataDB = require('./utils/DataDB')(appData);
 const SettingsDB = require('./utils/SettingsDB')(window.localStorage);
 
 const ExpensesTab = require('./components/ExpensesTab');
