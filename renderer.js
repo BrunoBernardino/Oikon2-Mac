@@ -7,7 +7,7 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 
 const { app } = remote;
-const DataDB = require('./utils/DataDB')(app.getAppPath());
+const DataDB = require('./utils/DataDB')(app.getPath('appData'));
 const SettingsDB = require('./utils/SettingsDB')(window.localStorage);
 
 const ExpensesTab = require('./components/ExpensesTab');
