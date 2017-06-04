@@ -1,5 +1,6 @@
 {
-  "name": "Oikon2-Mac",
+  "name": "Oikon2",
+  "productName": "Oikon 2",
   "version": "1.0.1",
   "description": "Manage Your Expenses",
   "main": "main.js",
