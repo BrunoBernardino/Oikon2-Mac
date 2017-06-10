@@ -5,11 +5,5 @@ node_modules
 # Mac App Store
 *.provisionprofile
 
-# PouchDB directories
-expenses/*
-types/*
-expenses-mrview*/*
-types-mrview*/*
-
 # Release
 build/*

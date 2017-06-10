@@ -1,4 +1,5 @@
-const { shell, app, globalShortcut } = require('electron');
+const localShortcut = require('electron-localshortcut');
+const { shell, app } = require('electron');
 
 const MenuTemplate = (mainWindow) => {
 
@@ -7,7 +8,7 @@ const MenuTemplate = (mainWindow) => {
       mainWindow.webContents.send('open-settings-from-menu');
     }
   };
-  globalShortcut.register('CommandOrControl+,', openSettings);
+  localShortcut.register(mainWindow, 'CommandOrControl+,', openSettings);
 
   const openImport = () => {
     if (mainWindow) {
@@ -17,7 +18,7 @@ const MenuTemplate = (mainWindow) => {
       }, 500);
     }
   };
-  globalShortcut.register('CommandOrControl+I', openImport);
+  localShortcut.register(mainWindow, 'CommandOrControl+I', openImport);
 
   const openExport = () => {
     if (mainWindow) {
@@ -27,14 +28,14 @@ const MenuTemplate = (mainWindow) => {
       }, 500);
     }
   };
-  globalShortcut.register('CommandOrControl+E', openExport);
+  localShortcut.register(mainWindow, 'CommandOrControl+E', openExport);
 
   const openFind = () => {
     if (mainWindow) {
       mainWindow.webContents.send('open-find-from-menu');
     }
   };
-  globalShortcut.register('CommandOrControl+F', openFind);
+  localShortcut.register(mainWindow, 'CommandOrControl+F', openFind);
 
   const template = [
     {

@@ -20,7 +20,7 @@ packager({
   arch: 'x64',
   icon: './assets/logo.icns',
   extendInfo: './info.plist',
-  buildVersion: 5,
+  buildVersion: 6,
   ignore: [
     /build\.js/,
     /entitlements\.plist/,
@@ -28,10 +28,6 @@ packager({
     /\.travis\.yml/,
     /\/(.*)\.provisionprofile/,
     /\/test\//,
-    /\/expenses\//,
-    /\/types\//,
-    /\/expenses-mrview(.*)/,
-    /\/types-mrview(.*)/,
   ],
   afterCopy: [(buildPath, electronVersion, platform, arch, callback) => {
     rebuild(buildPath, electronVersion, arch)
