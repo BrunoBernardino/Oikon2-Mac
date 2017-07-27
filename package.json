@@ -1,7 +1,7 @@
 {
   "name": "Oikon2",
   "productName": "Oikon 2",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Manage Your Expenses",
   "main": "main.js",
   "license": "ISC",
