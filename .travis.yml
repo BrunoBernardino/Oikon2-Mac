@@ -4,7 +4,7 @@ os:
 language: node_js
 
 node_js:
-  - "7.4.0"
+  - "7.10.1"
 
 script: npm run ci-test
 

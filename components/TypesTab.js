@@ -28,15 +28,15 @@ class TypesTab extends React.Component {
         <h2>{formattedTotal}</h2>
 
         <section className="types-list">
-        {types.map((type) => (
-          <div className="list-item"
-            key={type._id}
-          >
-            <span onClick={onTypeClick.bind(this, type)}>{type.name}</span>
-            <span onClick={onTypeClick.bind(this, type)}>{type.cost.toLocaleString(2, numberOptions)}</span>
-            <span><input type="checkbox" onChange={onToggleVisibleType.bind(this, type.name)} checked={(visibleTypes.indexOf(type.name) !== -1 || (visibleTypes.indexOf('') !== -1 && type.name === 'uncategorized'))} /></span>
-          </div>
-        ))}
+          {types.map((type) => (
+            <div className="list-item"
+              key={type._id}
+            >
+              <span onClick={onTypeClick.bind(this, type)}>{type.name}</span>
+              <span onClick={onTypeClick.bind(this, type)}>{type.cost.toLocaleString(2, numberOptions)}</span>
+              <span><input type="checkbox" onChange={onToggleVisibleType.bind(this, type.name)} checked={(visibleTypes.indexOf(type.name) !== -1 || (visibleTypes.indexOf('') !== -1 && type.name === 'uncategorized'))} /></span>
+            </div>
+          ))}
         </section>
       </section>
     );
