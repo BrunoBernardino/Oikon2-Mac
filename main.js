@@ -8,6 +8,12 @@ const {
 
 const path = require('path');
 const url = require('url');
+const os = require('os');
+
+const isMacOS = (os.platform() === 'darwin');
+const majorVersion = parseInt(os.release().split('.')[0], 10);
+const isSierraOrHigher = (isMacOS && majorVersion >= 16);
+const modalTimeout = isSierraOrHigher ? 200 : 500;
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -78,9 +84,14 @@ const createExpenseModalWindow = (expense, types) => {
     slashes: true
   }));
 
-  setTimeout(() => {
+  const loadContents = () => {
     child.webContents.send('send-expense-for-edit', expense, types);
-  }, 200);// child.on('ready') and 'ready-to-show' didn't work
+  };
+
+  setTimeout(loadContents, modalTimeout);
+  setTimeout(loadContents, modalTimeout * 2);
+  setTimeout(loadContents, modalTimeout * 3);
+  // child.once('ready-to-show', loadContents);// Doesn't work
 
   // child.webContents.openDevTools();
 
@@ -144,9 +155,14 @@ const createTypeModalWindow = (type) => {
     slashes: true
   }));
 
-  setTimeout(() => {
+  const loadContents = () => {
     child.webContents.send('send-type-for-edit', type);
-  }, 200);// child.on('ready') and 'ready-to-show' didn't work
+  };
+
+  setTimeout(loadContents, modalTimeout);
+  setTimeout(loadContents, modalTimeout * 2);
+  setTimeout(loadContents, modalTimeout * 3);
+  // child.once('ready-to-show', loadContents);// Doesn't work
 
   // child.webContents.openDevTools();
 
@@ -210,9 +226,14 @@ const createSettingsModalWindow = (remoteURL) => {
     slashes: true
   }));
 
-  setTimeout(() => {
+  const loadContents = () => {
     child.webContents.send('send-remoteURL-for-settings', remoteURL);
-  }, 200);// child.on('ready') and 'ready-to-show' didn't work
+  };
+
+  setTimeout(loadContents, modalTimeout);
+  setTimeout(loadContents, modalTimeout * 2);
+  setTimeout(loadContents, modalTimeout * 3);
+  // child.once('ready-to-show', loadContents);// Doesn't work
 
   // child.webContents.openDevTools();
 

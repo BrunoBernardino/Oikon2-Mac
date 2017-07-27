@@ -36,17 +36,17 @@ class ExpensesTab extends React.Component {
         </section>
 
         <section className="expenses-list">
-        {expenses.map((expense) => (
-          <div className="list-item"
-            key={expense._id}
-            onClick={onExpenseClick.bind(this, expense)}
-          >
-            <span>{expense.name}</span>
-            <span>{expense.type || '-'}</span>
-            <span>{moment(expense.date, 'YYYY-MM-DD').format('D MMM')}</span>
-            <span>{expense.cost.toLocaleString(2, numberOptions)}</span>
-          </div>
-        ))}
+          {expenses.map((expense) => (
+            <div className="list-item"
+              key={expense._id}
+              onClick={onExpenseClick.bind(this, expense)}
+            >
+              <span>{expense.name}</span>
+              <span>{expense.type || '-'}</span>
+              <span>{moment(expense.date, 'YYYY-MM-DD').format('D MMM')}</span>
+              <span>{expense.cost.toLocaleString(2, numberOptions)}</span>
+            </div>
+          ))}
         </section>
       </section>
     );
