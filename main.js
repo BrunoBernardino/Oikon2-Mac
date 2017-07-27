@@ -80,7 +80,7 @@ const createExpenseModalWindow = (expense, types) => {
 
   setTimeout(() => {
     child.webContents.send('send-expense-for-edit', expense, types);
-  }, 200);// child.on('ready') and 'ready-to-show' didn't work
+  }, 500);// child.on('ready') and 'ready-to-show' didn't work
 
   // child.webContents.openDevTools();
 
@@ -146,7 +146,7 @@ const createTypeModalWindow = (type) => {
 
   setTimeout(() => {
     child.webContents.send('send-type-for-edit', type);
-  }, 200);// child.on('ready') and 'ready-to-show' didn't work
+  }, 500);// child.on('ready') and 'ready-to-show' didn't work
 
   // child.webContents.openDevTools();
 
@@ -212,7 +212,7 @@ const createSettingsModalWindow = (remoteURL) => {
 
   setTimeout(() => {
     child.webContents.send('send-remoteURL-for-settings', remoteURL);
-  }, 200);// child.on('ready') and 'ready-to-show' didn't work
+  }, 500);// child.on('ready') and 'ready-to-show' didn't work
 
   // child.webContents.openDevTools();
 
