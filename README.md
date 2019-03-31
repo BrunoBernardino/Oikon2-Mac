@@ -2,7 +2,7 @@
 
 # Oikon 2 for Mac
 
-https://oikon.net
+https://itunes.apple.com/pt/app/oikon-2-manage-your-expenses/id1242561414
 
 [![Showcase](https://cloud.githubusercontent.com/assets/1239616/26329899/3c987998-3f41-11e7-885f-5e8726366712.png)](https://github.com/BrunoBernardino/Oikon2-Mac/issues/1)
 
