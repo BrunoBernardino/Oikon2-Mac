@@ -28,10 +28,11 @@ $ npm run build
 $ export OSX_SIGN_IDENTITY='XXX' && npm run release
 ```
 
-Make sure there's a valid `*.provisionprofile` file in the project directory.
-
+Make sure there's a valid `*.provisionprofile` file in the project directory (get or generate one from https://developer.apple.com/account/resources/profiles/list).
 
 To get a list of available identities:
 ```bash
 $ security find-identity -p codesigning -v
 ```
+
+Use the "Transporter" app from Apple to verify and upload the new .pkg

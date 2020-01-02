@@ -84,13 +84,13 @@ const MenuTemplate = (mainWindow) => {
         {
           label: 'Visit Website',
           click () {
-            shell.openExternal('https://oikon.net/');
+            shell.openExternal('https://oikon.brn.sh/');
           },
         },
         {
           label: 'Visit FAQ',
           click () {
-            shell.openExternal('https://oikon.net/faq.html');
+            shell.openExternal('https://oikon.brn.sh/faq.html');
           },
         },
       ],

@@ -1,7 +1,7 @@
 {
   "name": "Oikon2",
   "productName": "Oikon 2",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Manage Your Expenses",
   "main": "main.js",
   "license": "ISC",
@@ -24,7 +24,7 @@
     "mac",
     "ios"
   ],
-  "author": "BrunoBernardino",
+  "author": "Bruno Bernardino <me@brunobernardino.com>",
   "devDependencies": {
     "babel-eslint": "7.2.3",
     "chai": "4.1.0",

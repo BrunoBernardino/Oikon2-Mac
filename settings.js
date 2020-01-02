@@ -24,7 +24,7 @@ class App extends React.Component {
   }
 
   onFAQClick() {
-    shell.openExternal('https://oikon.net/faq.html');
+    shell.openExternal('https://oikon.brn.sh/faq.html');
   }
 
   onDelete() {
