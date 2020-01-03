@@ -8,13 +8,14 @@ https://itunes.apple.com/pt/app/oikon-2-manage-your-expenses/id1242561414
 
 ## Development
 
-Requires `node` (ideally through `nvm`) >= 7.0.0, and `npm`.
+Requires `node` (ideally through `nvm`) >= 10.0.0, and `npm`.
 
 Docs: http://electron.atom.io/docs
 
 ```bash
-$ npm test
+$ npm install
 $ npm start
+$ npm test
 ```
 
 ## Release
