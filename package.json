@@ -32,7 +32,7 @@
     "electron": "1.6.11",
     "electron-packager": "8.7.2",
     "electron-rebuild": "1.5.11",
-    "eslint": "4.3.0",
+    "eslint": "4.19.1",
     "eslint-plugin-react": "7.1.0",
     "mocha": "3.4.2",
     "spectron": "3.7.2"
